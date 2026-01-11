@@ -1,0 +1,251 @@
+/* =======================================
+   🔹 Fondo general y fuente divertida
+   ======================================= */
+body {
+  margin: 0; /* Quita los márgenes por defecto del navegador */
+  font-family: "Poppins", sans-serif; /* Fuente moderna y divertida para niños */
+  background: linear-gradient(180deg, hsl(189, 70%, 91%), #fef9d7); /* Fondo degradado suave de arriba hacia abajo */
+  color: #333; /* Color de texto por defecto */
+}
+
+/* =======================================
+   🔹 Contenedor principal de toda la app
+   ======================================= */
+.contenedor-app {
+  text-align: center; /* Centra todo el contenido horizontalmente */
+  padding-bottom: 60px; /* Espacio extra al final de la página */
+}
+
+/* =======================================
+   🔹 Encabezado con video de fondo
+   ======================================= */
+.encabezado {
+  position: relative; /* Necesario para posicionar el video de forma absoluta */
+  padding: 30px 20px; /* Espacio interno del header */
+  border-bottom: 4px solid #8bd3c7; /* Línea decorativa en la parte inferior */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave debajo del header */
+  overflow: hidden; /* Evita que el video sobresalga */
+  display: flex;
+  flex-direction: column; /* Elementos apilados en columna */
+  align-items: center; /* Centra horizontalmente los elementos */
+  justify-content: center; /* Centra verticalmente */
+  text-align: center; /* Centra el texto */
+  color: white; /* Color de texto por defecto dentro del header */
+}
+
+/* Video que sirve como fondo */
+.video-encabezado {
+  position: absolute; /* Posición absoluta para estar detrás del contenido */
+  top: 50%; /* Centrado vertical */
+  left: 50%; /* Centrado horizontal */
+  min-width: 100%; /* Ocupa todo el ancho mínimo */
+  min-height: 100%; /* Ocupa todo el alto mínimo */
+  width: auto; /* Ajusta ancho automáticamente */
+  height: auto; /* Ajusta altura automáticamente */
+  transform: translate(-50%, -50%); /* Centrado exacto del video */
+  z-index: 1; /* Se coloca detrás del contenido */
+  object-fit: cover; /* Cubre todo el contenedor sin deformar */
+}
+
+/* Contenido que aparece encima del video */
+.contenido-encabezado {
+  position: relative; /* Relativo para que esté sobre el video */
+  z-index: 2; /* Mayor que el video, para superponerse */
+}
+
+.encabezado h1,
+.encabezado p {
+  color: white; /* Texto blanco sobre video */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6); /* Sombra para mejorar visibilidad */
+}
+
+/* Logo dentro del header */
+.logo {
+  width: 120px; /* Tamaño del logo */
+  border-radius: 50%; /* Logo redondeado */
+  margin-bottom: 10px; /* Espacio debajo del logo */
+}
+
+/* =======================================
+   🔹 Secciones generales
+   ======================================= */
+.seccion {
+  margin: 40px auto; /* Espacio arriba y abajo, centrado horizontalmente */
+  max-width: 800px; /* Máximo ancho de la sección */
+  background-color: #ffffffc7; /* Fondo blanco semitransparente */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 25px; /* Espacio interno */
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08); /* Sombra suave */
+  transition: transform 0.3s; /* Animación al hacer hover */
+}
+
+.seccion:hover {
+  transform: scale(1.02); /* Aumenta ligeramente al pasar el mouse */
+}
+
+.seccion h2 {
+  color: #1a535c; /* Color de los títulos */
+  font-size: 1.8rem; /* Tamaño del título */
+  margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+/* =======================================
+   🔹 Ejercicios interactivos
+   ======================================= */
+.grid-ejercicios {
+  display: grid; /* Organiza los ejercicios en grid */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Columnas adaptables */
+  gap: 10px; /* Espacio entre ejercicios */
+  margin-top: 15px; /* Espacio encima del grid */
+}
+
+.item-ejercicio {
+  background-color: #fcd5ce; /* Fondo rosa claro */
+  border-radius: 15px; /* Bordes redondeados */
+  padding: 15px; /* Espacio interno */
+  display: flex;
+  flex-direction: column; /* Apila el input y botón */
+  align-items: center; /* Centrado horizontal */
+  transition: all 0.3s ease; /* Animación suave al hover */
+}
+
+.item-ejercicio:hover {
+  background-color: #fbb1bd; /* Rosa más intenso al pasar mouse */
+  transform: scale(1.05); /* Aumenta ligeramente */
+}
+
+/* Input para responder ejercicios */
+.item-ejercicio input {
+  margin-top: 8px; /* Separación del texto */
+  padding: 5px 10px; /* Espacio dentro del input */
+  border-radius: 10px; /* Bordes redondeados */
+  border: 2px solid #8bd3c7; /* Borde verde agua */
+  width: 60px; /* Ancho del input */
+  text-align: center; /* Texto centrado */
+  font-size: 1rem; /* Tamaño de letra */
+}
+
+/* Botón para verificar respuesta */
+.item-ejercicio button {
+  margin-top: 8px; /* Separación del input */
+  padding: 5px 12px; /* Espacio interno del botón */
+  border-radius: 10px; /* Bordes redondeados */
+  border: none; /* Sin borde */
+  background-color: #8bd3c7; /* Color del botón */
+  color: #fff; /* Texto blanco */
+  font-weight: bold; /* Negrita */
+  cursor: pointer; /* Cambia el cursor al pasar */
+  transition: background 0.3s; /* Transición suave de color */
+}
+
+.item-ejercicio button:hover {
+  background-color: #16a085; /* Cambio de color al pasar mouse */
+}
+
+/* =======================================
+   🔹 Manual de Usuario dentro de "Cómo Funciona"
+   ======================================= */
+.manual-usuario {
+  background-color: #ffffffc7; /* Fondo blanco semitransparente */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 20px; /* Espacio interno */
+  margin-top: 25px; /* Separación de la sección */
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08); /* Sombra suave */
+  text-align: left; /* Texto alineado a la izquierda */
+}
+
+.manual-usuario h3 {
+  color: #1a535c; /* Color del título del manual */
+  font-size: 1.6rem; /* Tamaño del título */
+  text-align: center; /* Centrado del título */
+  margin-bottom: 15px; /* Separación debajo del título */
+}
+
+.apartado-manual {
+  margin-top: 20px; /* Separación entre apartados */
+  background-color: #fef9d7; /* Fondo amarillo suave */
+  border-radius: 15px; /* Bordes redondeados */
+  padding: 15px; /* Espacio interno */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  transition: transform 0.3s ease, background 0.3s ease; /* Animación hover */
+}
+
+.apartado-manual:hover {
+  transform: scale(1.02); /* Aumenta ligeramente */
+  background-color: #fff9b6; /* Cambia color de fondo */
+}
+
+.apartado-manual h4 {
+  color: #1a535c; /* Color de subtítulo */
+  font-size: 1.3rem; /* Tamaño de subtítulo */
+  margin-bottom: 5px; /* Separación debajo del subtítulo */
+}
+
+.apartado-manual p, .apartado-manual ul {
+  line-height: 1.5; /* Altura de línea */
+  font-size: 1rem; /* Tamaño de letra */
+  margin-top: 5px; /* Espacio arriba */
+}
+
+.apartado-manual ul {
+  list-style-type: none; /* Quita viñetas por defecto */
+  padding-left: 0; /* Quita padding */
+}
+
+.apartado-manual li {
+  margin-bottom: 6px; /* Separación entre elementos de la lista */
+}
+
+/* Imágenes del manual */
+.imagen-operacion {
+  width: 90%; /* Ancho máximo 90% */
+  max-width: 600px; /* Ancho máximo absoluto */
+  border-radius: 15px; /* Bordes redondeados */
+  display: block; /* Bloque para centrar */
+  margin: 10px auto; /* Centrado horizontal y espacio arriba/abajo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Imagen principal de cómo funciona */
+.contenedor-imagen {
+  margin-top: 20px; /* Separación arriba */
+}
+
+.imagen-funciona {
+  width: 90%; /* Ancho máximo 90% */
+  max-width: 600px; /* Máximo ancho absoluto */
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra */
+}
+
+.pie-imagen {
+  font-size: 0.9rem; /* Tamaño de letra pequeño */
+  color: #444; /* Color gris oscuro */
+  margin-top: 5px; /* Separación arriba */
+}
+
+/* =======================================
+   🔹 Contacto
+   ======================================= */
+.contacto a {
+  display: block; /* Ocupa toda la línea */
+  margin-top: 10px; /* Espacio encima */
+  font-weight: bold; /* Texto en negrita */
+  color: #2c3e50; /* Color azul oscuro */
+  text-decoration: none; /* Sin subrayado */
+}
+
+.contacto a:hover {
+  color: #16a085; /* Cambia a verde agua al pasar mouse */
+}
+
+/* =======================================
+   🔹 Pie de página
+   ======================================= */
+.pie-pagina {
+  background-color: #a3e4db; /* Fondo azul claro */
+  padding: 15px; /* Espacio interno */
+  font-size: 0.9rem; /* Tamaño de letra pequeño */
+  color: #2c3e50; /* Color del texto */
+  margin-top: 30px; /* Separación arriba del footer */
+}
